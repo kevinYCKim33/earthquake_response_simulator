@@ -1,0 +1,28 @@
+******MDOF Instructions*******
+1. Open up Script titled "User_Input_MDOF.m" 
+
+2. Enter structural properties and initial conditions at every node, Select
+analysis method type, time increment
+
+3. Identify if feeding ground motion (1) or theoretical forcing function (2) under Ground_Motion variable.
+
+4. Save "User_Input_MDOF.m"
+
+5. Open up Script titled "MDOF_ForcingFunction.m"
+
+6. Several Sample scripts are provided. 
+	Sample #1: Free Vibration Case
+	Sample #2: 5-story Chimney w. step force as Exemplified in Chopra Chapter 12
+	Sample #3: El-Centro Ground Motion
+	Sample #4: #-story chimney w. harmonic function at top degree of freedom
+User should select appropriae Sample to serve as template for forcing function
+By commenting out (Ctrl+R) or uncommenting (Ctrl+T) appropriate sections
+
+7. Save "MDOF_ForcingFunction.m"
+
+8. RUN "MDOF_Run.m" by Right clicking the script from Current Folder Window
+and clicking Run.
+
+9. Results/Animations will output. 
+
+****For Detailed Explanation, read Sections 2.2~2.4 of accompanying report*****

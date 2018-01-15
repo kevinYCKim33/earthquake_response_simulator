@@ -1,0 +1,23 @@
+******SDOF Instructions*******
+1. Open up Script titled "User_Input.m" 
+
+2. Enter structural properties, initial conditions, analysis method type, time increment
+
+3. Identify if feeding ground motion (1) or theoretical forcing function (2) under Ground_Motion variable.
+
+4. Save "User_Input.m"
+
+5. Open up Script titled "ForcingFunction.m"
+
+6. Two sample scripts are provided. First a theoretic forcing harmonic function.
+Second a forcing function created from El Centro Ground Motion. Comment out (Ctrl+R)
+and Uncomment out (Ctrl+T) the appropriate forcing functions as user desires.
+
+7. Save "ForcingFunction.m"
+
+8. RUN "Project_Begin.m" by Right clicking the script from Current Folder Window
+and clicking Run.
+
+9. Results/Animations will output. 
+
+****For Detailed Explanation, read Sections 1.2, 1.3 of accompanying report*****

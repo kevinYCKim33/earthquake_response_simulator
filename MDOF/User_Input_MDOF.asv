@@ -1,0 +1,76 @@
+% FFT=1; %comment out if Fast Fourier Transform plot is not desired.
+%% SAMPLE USER INPUT #1--RC 5-story Chimney problem Chopra Example 15.1
+EI=5.469*10^10; %kip-ft^2;
+h=120; %feet; height per floor
+
+m=208.6; %kip-sec^2/ft; mass of floor
+m=[m;m;m;m;m/2]; %mass of every node
+
+u0=[0;0;0;0;0]; %initial displacements per floor of chimney--in feet
+v0=[0;0;0;0;0]; %initial velocity ft/s
+
+xi=0.00; %damping ratio of first two modes assuming Rayleigh Damping  
+
+dt=0.0; %enter time step increment [s]
+tr=30; %enter time range [s]
+
+Ground_Motion=1; %Enter 1 if feeding ground motion into Forcing Function
+                 %Enter 2 if inputting theoretical forcing functions.  
+Analysis_Type='Newmark'; %Enter 'CDM','Newmark'
+
+Show_Time_Lapse=2;%Enter 1 for Yes, 2 for No %display crosshair in displacement subplot moving along as time lapses
+%WARNING: Inputing 1 ('Yes) may significantly slow down chimney animation. 
+
+%% SAMPLE USER INPUT #2--RC 3-story Chimney 
+% EI=5.469*10^10; %kip-ft^2;
+% h=120; %feet; height per floor
+% 
+% m=208.6; %kip-sec^2/ft; mass of floor
+% m=[m;m;m/2]; %mass of every node
+% 
+% 
+% u0=[0;0;0]; %initial displacements per floor of chimney--in feet
+% v0=[0;0;0]; %initial velocity ft/s
+% 
+% xi=0.00; %damping ratio of first two modes assuming Rayleigh Damping  
+% 
+% dt=0.01; %enter time step increment [s]
+% tr=2; %enter time range [s]
+% 
+% Ground_Motion=2; %Enter 1 if feeding recorded ground motion into Forcing Function
+% %Enter 2 if inputting theoretical forcing functions.  
+% Analysis_Type='Newmark'; %Enter 'CDM','Newmark',or 'RungeKutta' 
+% NM_Type='average'; %Enter 'average', 'linear','N/A' for non-Newmark analysis types
+% Show_Time_Lapse=1;%Enter 1 for Yes, 2 for No %display crosshair in displacement subplot moving along as time lapses
+% %WARNING: Inputing 1 ('Yes) may significantly slow down chimney animation. 
+
+
+%%SAMPLE USER INPUT #3: n-story building with same m, 0 initial disp/vel
+% ndof=5; %number of story to add; please refer to SDOF file for ndof=1;  
+% 
+% EI=5.469*10^10; %kip-ft^2;
+% h=120; %feet; height per floor
+% mass=208.6; %kip-sec^2/ft; mass of floor 
+% xi=0.00; %damping ratio of first two modes assuming Rayleigh Damping  
+% 
+% dt=0.01; %enter time step increment [s]
+% tr=10; %enter time range [s]
+% 
+% Ground_Motion=2; %Enter 1 if feeding recorded ground motion into Forcing Function
+% Analysis_Type='Newmark'; %Enter 'CDM','Newmark',or 'RungeKutta' 
+% Show_Time_Lapse=2;%Enter 1 for Yes, 2 for No %display crosshair in displacement subplot moving along as time lapses
+% %WARNING: Inputing 1 ('Yes) may significantly slow down chimney animation. 
+% 
+% %END user Input
+% 
+% %intermediary matrices, user does not touch.
+% m=mass*ones(ndof,1);
+% size_up=length(m);
+% u0=zeros(size_up,1); %initial displacements per floor of chimney--in feet
+% v0=zeros(size_up,1); %initial velocity ft/s
+% if length(m)<2;
+%     error('ndof=1;please analyze under SDOF file condition'); 
+% end
+
+
+
